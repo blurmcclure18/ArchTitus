@@ -105,6 +105,9 @@ PKGS=(
 'gcc'
 'gimp' # Photo editing
 'git'
+'gnome'
+'gnome-extra'
+'gnome-shell-extensions'
 'gparted' # partition management
 'gptfdisk'
 'grub'
