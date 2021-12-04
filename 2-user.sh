@@ -27,7 +27,9 @@ PKGS=(
 'awesome-terminal-fonts'
 'brave-bin' # Brave Browser
 'dxvk-bin' # DXVK DirectX to Vulcan
+'eos-update-notifier'
 'github-desktop-bin' # Github Desktop sync
+'gnome-shell-extension-pop-shell-git'
 #'lightly-git'
 #'lightlyshaders-git'
 'mangohud' # Gaming FPS Counter
