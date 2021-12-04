@@ -94,7 +94,7 @@ PKGS=(
 'gamemode'
 'gcc'
 'git'
-'gnome'
+'gnome-shell'
 'gnome-boxes'
 'gnome-shell-extensions'
 'gnome-tweaks'
@@ -171,18 +171,18 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 
-RMPKGS=(
-	'gnome-software'
-	'cheese'
-	'gnome-books'
-	'gnome-contacts'
-	'gnome-terminal'
-)
+#RMPKGS=(
+#	'gnome-software'
+#	'cheese'
+#	'gnome-books'
+#	'gnome-contacts'
+#	'gnome-terminal'
+#)
 
-for PKG in "${RMPKGS[@]}"; do
-	echo "Removing : ${PKG}"
-	sudo pacman -Rns --noconfirm
-done
+#for PKG in "${RMPKGS[@]}"; do
+#	echo "Removing : ${PKG}"
+#	sudo pacman -Rns --noconfirm
+#done
 
 #
 # determine processor type and install microcode
