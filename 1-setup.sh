@@ -158,6 +158,7 @@ PKGS=(
 'wine-mono'
 'winetricks'
 'xdg-user-dirs'
+'xfce4-terminal'
 'zeroconf-ioslave'
 'zip'
 'zsh'
@@ -175,6 +176,7 @@ RMPKGS=(
 	'cheese'
 	'gnome-books'
 	'gnome-contacts'
+	'gnome-terminal'
 )
 
 for PKG in "${RMPKGS[@]}"; do
