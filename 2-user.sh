@@ -30,27 +30,17 @@ PKGS=(
 'eos-update-notifier'
 'github-desktop-bin' # Github Desktop sync
 'gnome-shell-extension-pop-shell-git'
-#'lightly-git'
-#'lightlyshaders-git'
 'mangohud' # Gaming FPS Counter
 'mangohud-common'
 'nerd-fonts-fira-code'
-#'nordic-darker-standard-buttons-theme'
-#'nordic-darker-theme'
-#'nordic-kde-git'
-#'nordic-theme'
 'noto-fonts-emoji'
 'pamac-aur-git'
 'papirus-icon-theme'
-#'plasma-pa'
 'ocs-url' # install packages from websites
-#'sddm-nordic-theme-git'
-'snapper-gui-git'
 'ttf-droid'
 'ttf-hack'
 'ttf-meslo' # Nerdfont package
 'ttf-roboto'
-'zoom' # video conferences
 'snap-pac'
 )
 
@@ -60,10 +50,5 @@ done
 
 export PATH=$PATH:~/.local/bin
 cp -r $HOME/ArchTitus/dotfiles/* $HOME/.config/
-pip install konsave
-konsave -i $HOME/ArchTitus/kde.knsv
-sleep 1
-konsave -a kde
-
 echo -e "\nDone!\n"
 exit

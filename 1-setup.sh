@@ -61,12 +61,8 @@ PKGS=(
 'xorg-drivers'
 'xorg-xkill'
 'xorg-xinit'
-#'xterm'
-#'plasma-desktop' # KDE Load second
 'alsa-plugins' # audio plugins
 'alsa-utils' # audio utils
-#'ark' # compression
-#'audiocd-kio' 
 'autoconf' # build
 'automake' # build
 'base'
@@ -74,12 +70,9 @@ PKGS=(
 'bind'
 'binutils'
 'bison'
-#'bluedevil'
 'bluez'
 'bluez-libs'
 'bluez-utils'
-#'breeze'
-#'breeze-gtk'
 'bridge-utils'
 'btrfs-progs'
 'celluloid' # video players
@@ -88,26 +81,21 @@ PKGS=(
 'cronie'
 'cups'
 'dialog'
-#'discover'
-#'dolphin'
 'dosfstools'
 'dtc'
 'efibootmgr' # EFI boot
 'egl-wayland'
 'exfat-utils'
 'extra-cmake-modules'
-#'filelight'
 'flex'
 'fuse2'
 'fuse3'
 'fuseiso'
 'gamemode'
 'gcc'
-#'gimp' # Photo editing
 'git'
 'gnome'
 'gnome-boxes'
-#'gnome-extra'
 'gnome-shell-extensions'
 'gnome-tweaks'
 'gparted' # partition management
@@ -117,22 +105,9 @@ PKGS=(
 'gst-libav'
 'gst-plugins-good'
 'gst-plugins-ugly'
-#'gwenview'
 'haveged'
 'htop'
 'iptables-nft'
-'jdk-openjdk' # Java 17
-#'kate'
-#'kcodecs'
-#'kcoreaddons'
-#'kdeplasma-addons'
-#'kde-gtk-config'
-#'kinfocenter'
-#'kscreen'
-#'kvantum-qt5'
-#'kitty'
-#'konsole'
-#'kscreen'
 'layer-shell-qt'
 'libdvdcss'
 'libnewt'
@@ -145,27 +120,20 @@ PKGS=(
 'lzop'
 'm4'
 'make'
-'milou'
 'nano'
 'neofetch'
 'networkmanager'
 'ntfs-3g'
 'ntp'
-#'okular'
 'openbsd-netcat'
 'openssh'
 'os-prober'
-#'oxygen'
 'p7zip'
 'pacman-contrib'
 'patch'
 'picom'
 'pkgconf'
-#'plasma-meta'
-#'plasma-nm'
-'powerdevil'
 'powerline-fonts'
-#'print-manager'
 'pulseaudio'
 'pulseaudio-alsa'
 'pulseaudio-bluetooth'
@@ -173,32 +141,22 @@ PKGS=(
 'python-psutil'
 'python-pyqt5'
 'python-pip'
-'qemu'
 'rsync'
 'sddm'
-'sddm-kcm'
-'snapper'
-#'spectacle'
 'steam'
 'sudo'
 'swtpm'
-#'synergy'
-#'systemsettings'
 'terminus-font'
 'traceroute'
 'ufw'
 'unrar'
 'unzip'
 'usbutils'
-'vim'
-'virt-manager'
-'virt-viewer'
 'wget'
 'which'
 'wine-gecko'
 'wine-mono'
 'winetricks'
-'xdg-desktop-portal-kde'
 'xdg-user-dirs'
 'zeroconf-ioslave'
 'zip'
@@ -210,6 +168,18 @@ PKGS=(
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
+done
+
+RMPKGS=(
+	'gnome-software'
+	'cheese'
+	'gnome-books'
+	'gnome-contacts'
+)
+
+for PKG in "${RMPKGS[@]}"; do
+	echo "Removing : ${PKG}"
+	sudo pacman -Rns --noconfirm
 done
 
 #
@@ -241,7 +211,7 @@ fi
 
 echo -e "\nDone!\n"
 if ! source install.conf; then
-	read -p "Please enter username:" username
+	read -p "Please enter username(Must Be LowerCase!):" username
 echo "username=$username" >> ${HOME}/ArchTitus/install.conf
 fi
 if [ $(whoami) = "root"  ];
