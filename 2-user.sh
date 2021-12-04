@@ -28,20 +28,21 @@ PKGS=(
 'brave-bin' # Brave Browser
 'dxvk-bin' # DXVK DirectX to Vulcan
 'github-desktop-bin' # Github Desktop sync
-'lightly-git'
-'lightlyshaders-git'
+#'lightly-git'
+#'lightlyshaders-git'
 'mangohud' # Gaming FPS Counter
 'mangohud-common'
 'nerd-fonts-fira-code'
-'nordic-darker-standard-buttons-theme'
-'nordic-darker-theme'
-'nordic-kde-git'
-'nordic-theme'
+#'nordic-darker-standard-buttons-theme'
+#'nordic-darker-theme'
+#'nordic-kde-git'
+#'nordic-theme'
 'noto-fonts-emoji'
+'pamac-aur-git'
 'papirus-icon-theme'
-'plasma-pa'
+#'plasma-pa'
 'ocs-url' # install packages from websites
-'sddm-nordic-theme-git'
+#'sddm-nordic-theme-git'
 'snapper-gui-git'
 'ttf-droid'
 'ttf-hack'
