@@ -106,8 +106,10 @@ PKGS=(
 #'gimp' # Photo editing
 'git'
 'gnome'
+'gnome-boxes'
 #'gnome-extra'
 'gnome-shell-extensions'
+'gnome-tweaks'
 'gparted' # partition management
 'gptfdisk'
 'grub'
@@ -115,7 +117,7 @@ PKGS=(
 'gst-libav'
 'gst-plugins-good'
 'gst-plugins-ugly'
-'gwenview'
+#'gwenview'
 'haveged'
 'htop'
 'iptables-nft'
