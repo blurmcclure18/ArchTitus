@@ -29,7 +29,7 @@ PKGS=(
 'dxvk-bin' # DXVK DirectX to Vulcan
 'eos-update-notifier'
 'github-desktop-bin' # Github Desktop sync
-'gnome-shell-extension-pop-shell-bin'
+'gnome-shell-extension-pop-shell-git'
 'gnome-shell-extension-dash-to-dock'
 'mangohud' # Gaming FPS Counter
 'mangohud-common'
