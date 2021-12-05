@@ -29,12 +29,16 @@ PKGS=(
 'dxvk-bin' # DXVK DirectX to Vulcan
 'eos-update-notifier'
 'github-desktop-bin' # Github Desktop sync
+'gnome-shell-extension-pop-shell-bin'
+'gnome-shell-extension-dash-to-dock'
 'mangohud' # Gaming FPS Counter
 'mangohud-common'
 'nerd-fonts-fira-code'
 'noto-fonts-emoji'
 'pamac-aur-git'
-'papirus-icon-theme'
+#'papirus-icon-theme'
+'pop-icon-theme'
+'pop-gtk-theme'
 'ocs-url' # install packages from websites
 'ttf-droid'
 'ttf-hack'
