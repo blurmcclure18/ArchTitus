@@ -40,7 +40,7 @@ echo "-------------------------------------------------"
 echo "-------select your disk to format----------------"
 echo "-------------------------------------------------"
 lsblk
-echo "Please enter disk to work on: (example /dev/sda)"
+echo "Please enter disk to work on include /dev before the name listed above: (example /dev/sda)"
 read DISK
 echo "THIS WILL FORMAT AND DELETE ALL DATA ON THE DISK"
 read -p "are you sure you want to continue (Y/N):" formatdisk

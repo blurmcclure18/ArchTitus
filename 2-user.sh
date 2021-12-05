@@ -25,12 +25,12 @@ ln -s "$HOME/zsh/.zshrc" $HOME/.zshrc
 PKGS=(
 'autojump'
 'awesome-terminal-fonts'
-#'brave-bin' # Brave Browser
+'brave-bin' # Brave Browser
 'dxvk-bin' # DXVK DirectX to Vulcan
 'eos-update-notifier'
 'github-desktop-bin' # Github Desktop sync
-#'mangohud' # Gaming FPS Counter
-#'mangohud-common'
+'mangohud' # Gaming FPS Counter
+'mangohud-common'
 'nerd-fonts-fira-code'
 'noto-fonts-emoji'
 'pamac-aur-git'
