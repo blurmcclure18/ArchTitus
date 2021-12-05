@@ -81,6 +81,7 @@ PKGS=(
 'code' # Visual Studio code
 'cronie'
 'cups'
+'dconf'
 'dialog'
 'discord'
 'dosfstools'
