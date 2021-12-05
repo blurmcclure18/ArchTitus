@@ -235,7 +235,7 @@ fi
 
 echo -e "\nDone!\n"
 if ! source install.conf; then
-	read -p "Please enter username(Must Be LowerCase!):" username
+	read -p "Please enter username(Must Be lowercase!):" username
 echo "username=$username" >> ${HOME}/ArchTitus/install.conf
 fi
 if [ $(whoami) = "root"  ];
