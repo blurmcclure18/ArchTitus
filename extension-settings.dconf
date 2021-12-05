@@ -1,0 +1,16 @@
+[dash-to-dock]
+apply-custom-theme=false
+background-opacity=0.80000000000000004
+custom-theme-shrink=false
+dash-max-icon-size=48
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+show-apps-at-top=true
+
+[pop-shell]
+gap-inner=uint32 1
+gap-outer=uint32 1
+tile-by-default=false
+
+[user-theme]
+name='Pop-dark'
