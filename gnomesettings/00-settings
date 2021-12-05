@@ -1,3 +1,12 @@
+[dash-to-dock]
+apply-custom-theme=false
+background-opacity=0.80000000000000004
+custom-theme-shrink=false
+dash-max-icon-size=48
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+show-apps-at-top=true
+
 [org/gnome/control-center]
 last-panel='network'
 
@@ -32,6 +41,10 @@ font-hinting='slight'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Pop-dark'
 icon-theme='Pop'
+toolkit-accessibility=false
+
+[org/gnome/desktop/peripherals/keyboard]
+numlock-state=false
 
 [org/gnome/desktop/screensaver]
 picture-options='zoom'
@@ -49,8 +62,17 @@ button-layout='appmenu:minimize,maximize,close'
 migrated=true
 network-monitor-gio-name=''
 
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 550)
+maximized=false
+
 [org/gnome/shell]
 app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Maps.desktop': <{'position': <3>}>, 'org.gnome.Books.desktop': <{'position': <4>}>, 'org.gnome.Photos.desktop': <{'position': <5>}>, 'org.gnome.Totem.desktop': <{'position': <6>}>, 'org.gnome.Calculator.desktop': <{'position': <7>}>, 'org.gnome.gedit.desktop': <{'position': <8>}>, 'simple-scan.desktop': <{'position': <9>}>, 'gnome-control-center.desktop': <{'position': <10>}>, 'gnome-system-monitor.desktop': <{'position': <11>}>, 'org.gnome.Boxes.desktop': <{'position': <12>}>, 'org.gnome.Software.desktop': <{'position': <13>}>, 'Utilities': <{'position': <14>}>, 'bssh.desktop': <{'position': <15>}>, 'yelp.desktop': <{'position': <16>}>, 'bvnc.desktop': <{'position': <17>}>, 'org.gnome.Cheese.desktop': <{'position': <18>}>, 'org.gnome.Terminal.desktop': <{'position': <19>}>, 'org.gnome.Music.desktop': <{'position': <20>}>, 'avahi-discover.desktop': <{'position': <21>}>, 'cmake-gui.desktop': <{'position': <22>}>}, {'io.github.celluloid_player.Celluloid.desktop': <{'position': <0>}>, 'code-oss.desktop': <{'position': <1>}>, 'electron13.desktop': <{'position': <2>}>, 'org.gnome.Extensions.desktop': <{'position': <3>}>, 'gparted.desktop': <{'position': <4>}>, 'github-desktop.desktop': <{'position': <5>}>, 'grub-customizer.desktop': <{'position': <6>}>, 'lstopo.desktop': <{'position': <7>}>, 'htop.desktop': <{'position': <8>}>, 'cups.desktop': <{'position': <9>}>, 'org.gnome.PasswordSafe.desktop': <{'position': <10>}>, 'qv4l2.desktop': <{'position': <11>}>, 'qvidcap.desktop': <{'position': <12>}>, 'vim.desktop': <{'position': <13>}>, 'winetricks.desktop': <{'position': <14>}>, 'xfce4-terminal.desktop': <{'position': <15>}>, 'compton.desktop': <{'position': <16>}>, 'mpv.desktop': <{'position': <17>}>, 'picom.desktop': <{'position': <18>}>, 'org.gnome.Calendar.desktop': <{'position': <19>}>, 'org.gnome.Epiphany.desktop': <{'position': <20>}>}]
+disable-user-extensions=false
 disabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['pop-shell@system76.com', 'pamac-updates@manjaro.org', 'dash-to-dock@micxgx.gmail.com']
 favorite-apps=['brave-browser.desktop', 'org.gnome.Nautilus.desktop', 'xfce4-terminal.desktop', 'org.manjaro.pamac.manager.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'discord.desktop']
@@ -95,3 +117,11 @@ sort-order='ascending'
 type-format='category'
 window-position=(0, 0)
 window-size=(1024, 689)
+
+[pop-shell]
+gap-inner=uint32 1
+gap-outer=uint32 1
+tile-by-default=false
+
+[user-theme]
+name='Pop-dark'
