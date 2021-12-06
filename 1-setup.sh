@@ -51,7 +51,7 @@ sed -i 's/^#Para/Para/' /etc/pacman.conf
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 
-read -p $'Please select a Desktop Environment:\n 1.Gnome\n 2.KDE\n 3.Both\n:' desktopenv
+read -p $'\nDesktop Environments:\n 1.Gnome\n 2.KDE\n 3.Both\nPlease select a Desktop Environment:' desktopenv
 echo "desktopenv=$desktopenv" >> ${HOME}/ArchTitus/desktopenv.conf
 
 if [[ $desktopenv -eq 1 ]]
