@@ -112,6 +112,7 @@ GNOMEPKGS=(
 	'gdm'
 	'git'
 	'gnome'
+	'gnome-backgrounds'
 	'gnome-boxes'
 	'gnome-passwordsafe'
 	'gnome-shell-extensions'
