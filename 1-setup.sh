@@ -495,12 +495,12 @@ BOTHPKGS=(
 
 if [[ $desktopenv -eq 1 ]]
 then
-    PKGS=$GNOMEPKGS
+    PKGS=("${GNOMEPKGS[@]}")
 elif [[ $desktopenv -eq 2 ]]
 then
-    PKGS=$KDEPKGS
+    PKGS=("${KDEPKGS[@]}")
 else
-    PKGS=$BOTHPKGS
+    PKGS=("${BOTHPKGS[@]}")
 fi
 
 for PKG in "${PKGS[@]}"; do
