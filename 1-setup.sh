@@ -51,10 +51,23 @@ sed -i 's/^#Para/Para/' /etc/pacman.conf
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 
+read -p $'Please select a Desktop Environment:\n 1.Gnome\n 2.KDE\n 3.Both\n:' desktopenv
+echo "desktopenv=$desktopenv" >> ${HOME}/ArchTitus/desktopenv.conf
+
+if [[ $desktopenv -eq 1 ]]
+then
+    echo "You chose Gnome as your Desktop Environment"
+elif [[ $desktopenv -eq 2 ]]
+then
+	echo "You chose KDE as your Desktop Environment"
+else
+    echo "You chose Both KDE and Gnome as your Desktop Environment"
+fi
+
 echo -e "\nInstalling Base System\n"
 
-PKGS=(
-'mesa' # Essential Xorg First
+GNOMEPKGS=(
+	'mesa' # Essential Xorg First
 'xorg'
 'xorg-server'
 'xorg-apps'
@@ -172,6 +185,324 @@ PKGS=(
 'zsh-autosuggestions'
 )
 
+KDEPKGS=(
+'mesa' # Essential Xorg First
+'xorg'
+'xorg-server'
+'xorg-apps'
+'xorg-drivers'
+'xorg-xkill'
+'xorg-xinit'
+'xterm'
+'plasma-desktop' # KDE Load second
+'alsa-plugins' # audio plugins
+'alsa-utils' # audio utils
+'ark' # compression
+'audiocd-kio' 
+'autoconf' # build
+'automake' # build
+'base'
+'bash-completion'
+'bind'
+'binutils'
+'bison'
+'bluedevil'
+'bluez'
+'bluez-libs'
+'bluez-utils'
+'breeze'
+'breeze-gtk'
+'bridge-utils'
+'btrfs-progs'
+'celluloid' # video players
+'cmatrix'
+'code' # Visual Studio code
+'cronie'
+'cups'
+'dialog'
+'discover'
+'dolphin'
+'dosfstools'
+'dtc'
+'efibootmgr' # EFI boot
+'egl-wayland'
+'exfat-utils'
+'extra-cmake-modules'
+'filelight'
+'flex'
+'fuse2'
+'fuse3'
+'fuseiso'
+'gamemode'
+'gcc'
+'gimp' # Photo editing
+'git'
+'gparted' # partition management
+'gptfdisk'
+'grub'
+'grub-customizer'
+'gst-libav'
+'gst-plugins-good'
+'gst-plugins-ugly'
+'gwenview'
+'haveged'
+'htop'
+'iptables-nft'
+'jdk-openjdk' # Java 17
+'kate'
+'kcodecs'
+'kcoreaddons'
+'kdeplasma-addons'
+'kde-gtk-config'
+'kinfocenter'
+'kscreen'
+'kvantum-qt5'
+'kitty'
+'konsole'
+'kscreen'
+'layer-shell-qt'
+'libdvdcss'
+'libnewt'
+'libtool'
+'linux'
+'linux-firmware'
+'linux-headers'
+'lsof'
+'lutris'
+'lzop'
+'m4'
+'make'
+'milou'
+'nano'
+'neofetch'
+'networkmanager'
+'ntfs-3g'
+'ntp'
+'okular'
+'openbsd-netcat'
+'openssh'
+'os-prober'
+'oxygen'
+'p7zip'
+'pacman-contrib'
+'patch'
+'picom'
+'pkgconf'
+'plasma-meta'
+'plasma-nm'
+'powerdevil'
+'powerline-fonts'
+'print-manager'
+'pulseaudio'
+'pulseaudio-alsa'
+'pulseaudio-bluetooth'
+'python-notify2'
+'python-psutil'
+'python-pyqt5'
+'python-pip'
+'qemu'
+'rsync'
+'sddm'
+'sddm-kcm'
+'snapper'
+'spectacle'
+'steam'
+'sudo'
+'swtpm'
+'synergy'
+'systemsettings'
+'terminus-font'
+'traceroute'
+'ufw'
+'unrar'
+'unzip'
+'usbutils'
+'vim'
+'virt-manager'
+'virt-viewer'
+'wget'
+'which'
+'wine-gecko'
+'wine-mono'
+'winetricks'
+'xdg-desktop-portal-kde'
+'xdg-user-dirs'
+'zeroconf-ioslave'
+'zip'
+'zsh'
+'zsh-syntax-highlighting'
+'zsh-autosuggestions'
+)
+
+BOTHPKGS=(
+'mesa' # Essential Xorg First
+'xorg'
+'xorg-server'
+'xorg-apps'
+'xorg-drivers'
+'xorg-xkill'
+'xorg-xinit'
+'xterm'
+'plasma-desktop' # KDE Load second
+'alsa-plugins' # audio plugins
+'alsa-utils' # audio utils
+'ark' # compression
+'audiocd-kio' 
+'autoconf' # build
+'automake' # build
+'base'
+'bash-completion'
+'baobab'
+'bind'
+'binutils'
+'bison'
+'bluedevil'
+'bluez'
+'bluez-libs'
+'bluez-utils'
+'breeze'
+'breeze-gtk'
+'bridge-utils'
+'btrfs-progs'
+'celluloid' # video players
+'cmatrix'
+'code' # Visual Studio code
+'cronie'
+'cups'
+'dconf'
+'dialog'
+'discord'
+'discover'
+'dolphin'
+'dosfstools'
+'dtc'
+'efibootmgr' # EFI boot
+'egl-wayland'
+'exfat-utils'
+'extra-cmake-modules'
+'filelight'
+'flex'
+'fuse2'
+'fuse3'
+'fuseiso'
+'gamemode'
+'gcc'
+'gdm'
+'gimp'
+'git'
+'gnome'
+'gnome-boxes'
+'gnome-passwordsafe'
+'gnome-shell-extensions'
+'gnome-tweaks'
+'gparted' # partition management
+'gptfdisk'
+'grub'
+'grub-customizer'
+'gst-libav'
+'gst-plugins-good'
+'gst-plugins-ugly'
+'gwenview'
+'haveged'
+'htop'
+'iptables-nft'
+'jdk-openjdk' # Java 17
+'kate'
+'kcodecs'
+'kcoreaddons'
+'kdeplasma-addons'
+'kde-gtk-config'
+'kinfocenter'
+'kscreen'
+'kvantum-qt5'
+'konsole'
+'kscreen'
+'layer-shell-qt'
+'libdvdcss'
+'libnewt'
+'libtool'
+'linux'
+'linux-firmware'
+'linux-headers'
+'lsof'
+'lutris'
+'lzop'
+'m4'
+'make'
+'milou'
+'nano'
+'neofetch'
+'networkmanager'
+'ntfs-3g'
+'ntp'
+'okular'
+'openbsd-netcat'
+'openssh'
+'os-prober'
+'oxygen'
+'p7zip'
+'pacman-contrib'
+'patch'
+'picom'
+'pkgconf'
+'plasma-meta'
+'plasma-nm'
+'powerdevil'
+'powerline-fonts'
+'print-manager'
+'pulseaudio'
+'pulseaudio-alsa'
+'pulseaudio-bluetooth'
+'python-notify2'
+'python-psutil'
+'python-pyqt5'
+'python-pip'
+'qemu'
+'rsync'
+'sddm'
+'sddm-kcm'
+'snapper'
+'spectacle'
+'steam'
+'sudo'
+'swtpm'
+'synergy'
+'systemsettings'
+'terminus-font'
+'traceroute'
+'ufw'
+'unrar'
+'unzip'
+'usbutils'
+'vim'
+'virt-manager'
+'virt-viewer'
+'wget'
+'which'
+'wine-gecko'
+'wine-mono'
+'winetricks'
+'xdg-desktop-portal-gnome'
+'xdg-desktop-portal-kde'
+'xdg-user-dirs'
+'xfce4-terminal'
+'zeroconf-ioslave'
+'zip'
+'zsh'
+'zsh-syntax-highlighting'
+'zsh-autosuggestions'
+)
+
+if [[ $desktopenv -eq 1 ]]
+then
+    PKGS=$GNOMEPKGS
+elif [[ $desktopenv -eq 2 ]]
+then
+    PKGS=$KDEPKGS
+else
+    PKGS=$BOTHPKGS
+fi
+
 for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
@@ -220,4 +551,3 @@ then
 else
 	echo "You are already a user proceed with aur installs"
 fi
-

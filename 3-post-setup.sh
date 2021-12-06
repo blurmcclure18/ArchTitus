@@ -20,8 +20,22 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # ------------------------------------------------------------------------
 
 echo -e "\nEnabling Login Display Manager"
-systemctl enable gdm.service
+source ${HOME}/ArchTitus/desktopenv.conf
 
+if [[ $desktopenv -eq 1 ]]
+then
+    systemctl enable gdm.service
+elif [[ $desktopenv -eq 2 ]]
+then
+    systemctl enable sddm.service
+    echo -e "\nSetup SDDM Theme"
+    cat <<EOF > /etc/sddm.conf
+    [Theme]
+    Current=Nordic
+EOF
+else
+    systemctl enable gdm.service
+fi
 # ------------------------------------------------------------------------
 
 echo -e "\nEnabling essential services"
