@@ -45,15 +45,6 @@ sed -i 's/^# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 
 # Replace in the same state
 cd $pwd
-
-#copy default gnome settings to installation
-mkdir /mnt/etc/dconf/profile
-mkdir /mnt/etc/dconf/db/local.d
-
-cp ./gnomesettings/user /mnt/etc/dconf/profile
-cp ./gnomesettings/local /mnt/etc/dconf/db/
-cp ./gnomesettings/00-settings /mnt/etc/dconf/db/local.d
-
 echo "
 ###############################################################################
 # Done - Please Eject Install Media and Reboot

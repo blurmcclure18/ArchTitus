@@ -99,23 +99,10 @@ PKGS=(
 'gdm'
 'git'
 'gnome'
-#'gnome-backgrounds'
 'gnome-boxes'
-#'gnome-calculator'
-#'gnome-calendar'
-#'gnome-font-viewer'
-#'gnome-maps'
-#'gnome-notes'
 'gnome-passwordsafe'
-#'gnome-photos'
-#'gnome-screenshot'
-#'gnome-settings'
-#'gnome-shell'
 'gnome-shell-extensions'
-#'gnome-system-monitor'
-#'gnome-todo'
 'gnome-tweaks'
-#'gnome-weather'
 'gparted' # partition management
 'gptfdisk'
 'grub'
@@ -138,8 +125,6 @@ PKGS=(
 'lzop'
 'm4'
 'make'
-#'nautilis'
-#'nautilis-image-converter'
 'nano'
 'neofetch'
 'networkmanager'
@@ -180,7 +165,6 @@ PKGS=(
 'xdg-desktop-portal-gnome'
 'xdg-user-dirs'
 'xfce4-terminal'
-#'yelp'
 'zeroconf-ioslave'
 'zip'
 'zsh'
@@ -192,19 +176,6 @@ for PKG in "${PKGS[@]}"; do
     echo "INSTALLING: ${PKG}"
     sudo pacman -S "$PKG" --noconfirm --needed
 done
-
-#RMPKGS=(
-#	'gnome-software'
-#	'cheese'
-#	'gnome-books'
-#	'gnome-contacts'
-#	'gnome-terminal'
-#)
-
-#for PKG in "${RMPKGS[@]}"; do
-#	echo "Removing : ${PKG}"
-#	sudo pacman -Rns --noconfirm
-#done
 
 #
 # determine processor type and install microcode

@@ -36,7 +36,6 @@ PKGS=(
 'nerd-fonts-fira-code'
 'noto-fonts-emoji'
 'pamac-aur-git'
-#'papirus-icon-theme'
 'pop-icon-theme'
 'pop-gtk-theme'
 'ocs-url' # install packages from websites
