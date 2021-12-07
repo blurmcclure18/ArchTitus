@@ -56,13 +56,15 @@ echo "desktopenv=$desktopenv" >> ${HOME}/ArchTitus/desktopenv.conf
 
 if [[ $desktopenv -eq 1 ]]
 then
-    echo "You chose Gnome as your Desktop Environment"
+    echo $'\nYou chose Gnome as your Desktop Environment'
 elif [[ $desktopenv -eq 2 ]]
 then
-	echo "You chose KDE as your Desktop Environment"
+	echo $'\nYou chose KDE as your Desktop Environment'
 else
-    echo "You chose Both KDE and Gnome as your Desktop Environment"
+    echo $'\nYou chose Both KDE and Gnome as your Desktop Environment'
 fi
+
+read -p $'\nPress Enter to Continue...'
 
 echo -e "\nInstalling Base System\n"
 
