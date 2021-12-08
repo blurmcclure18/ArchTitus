@@ -406,6 +406,7 @@ LXQTPKGS=(
 	'm4'
 	'make'
 	'nano'
+	'nautilis'
 	'neofetch'
 	'networkmanager'
 	'ntfs-3g'
