@@ -35,6 +35,11 @@ then
 EOF
 elif [[ $desktopenv -eq 3 ]]
     systemctl enable sddm.service
+    echo -e "\nSetup SDDM Theme"
+    cat <<EOF > /etc/sddm.conf
+    [Theme]
+    Current=Sugar-Candy
+EOF
 else
     systemctl enable gdm.service
 fi
