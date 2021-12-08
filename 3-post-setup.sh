@@ -34,9 +34,8 @@ then
     Current=Nordic
 EOF
 elif [[ $desktopenv -eq 3 ]]
+    cp /root/ArchTitus/lxqtsettings/default.conf /usr/lib/sddm/sddm.conf.d/
     systemctl enable sddm.service
-else
-    systemctl enable gdm.service
 fi
 # ------------------------------------------------------------------------
 
