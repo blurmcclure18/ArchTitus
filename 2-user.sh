@@ -89,6 +89,7 @@ LXQTPKGS=(
     'noto-fonts-emoji'
     'pamac-aur-git'
     'ocs-url' # install packages from websites
+    'sddm-nordic-theme-git'
     #'themix-full-git'
     'ttf-droid'
     'ttf-hack'
