@@ -140,8 +140,11 @@ then
 elif [[ $desktopenv -eq 2 ]]
 then
     PKGS=("${KDEPKGS[@]}")
+elif [[ $desktopenv -eq 3 ]]
+then
+    PKGS=("${LXQTPKGS[@]}")
 else
-    PKGS=("${BOTHPKGS[@]}")
+    PKGS=("${GNOMEPKGS[@]}")
 fi
 
 for PKG in "${PKGS[@]}"; do
