@@ -17,8 +17,8 @@ From initial Prompt type the following commands:
 
 ```
 pacman -Sy git
-git clone https://github.com/ChrisTitusTech/blurmcclure18/archtitus-gnome
-cd archtitus-gnome
+git clone https://github.com/blurmcclure18/archtitus
+cd archtitus
 ./archtitus.sh
 ```
 
