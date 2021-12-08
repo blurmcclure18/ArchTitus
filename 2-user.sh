@@ -77,23 +77,13 @@ KDEPKGS=(
 )
 
 LXQTPKGS=(
-    'autojump'
-    'awesome-terminal-fonts'
     'brave-bin' # Brave Browser
     'dxvk-bin' # DXVK DirectX to Vulcan
     'github-desktop-bin' # Github Desktop sync
-    'nerd-fonts-fira-code'
-    'noto-fonts-emoji'
     'pamac-aur-git'
     'ocs-url' # install packages from websites
     'sddm-theme-sugar-candy-git'
     #'themix-full-git'
-    'ttf-droid'
-    'ttf-hack'
-    'ttf-meslo' # Nerdfont package
-    'ttf-roboto'
-    #'zoom' # video conferences
-    'snap-pac'
 )
 
 BOTHPKGS=(
