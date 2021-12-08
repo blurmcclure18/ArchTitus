@@ -33,6 +33,13 @@ then
     [Theme]
     Current=Nordic
 EOF
+elif [[ $desktopenv -eq 3 ]]
+        systemctl enable sddm.service
+    echo -e "\nSetup SDDM Theme"
+    cat <<EOF > /etc/sddm.conf
+    [Theme]
+    Current=Nordic
+EOF
 else
     systemctl enable gdm.service
 fi

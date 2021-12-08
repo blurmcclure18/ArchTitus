@@ -9,9 +9,6 @@
     if [[ $desktopenv -eq 1 ]]
     then
         arch-chroot /mnt /root/ArchTitus/4-gnome-settings.sh
-    elif [[ $desktopenv -eq 3 ]]
-    then
-        arch-chroot /mnt /root/ArchTitus/4-gnome-settings.sh
     else
         echo "Done!"
     fi

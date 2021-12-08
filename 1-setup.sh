@@ -51,7 +51,7 @@ sed -i 's/^#Para/Para/' /etc/pacman.conf
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Sy --noconfirm
 
-read -p $'\nDesktop Environments:\n 1.Gnome\n 2.KDE\n 3.Both\nPlease select a Desktop Environment:' desktopenv
+read -p $'\nDesktop Environments:\n 1.Gnome\n 2.KDE\n 3.LxQT\nPlease select a Desktop Environment:' desktopenv
 echo "desktopenv=$desktopenv" >> ${HOME}/ArchTitus/desktopenv.conf
 
 if [[ $desktopenv -eq 1 ]]
@@ -61,7 +61,7 @@ elif [[ $desktopenv -eq 2 ]]
 then
 	echo $'\nYou chose KDE as your Desktop Environment'
 else
-    echo $'\nYou chose Both KDE and Gnome as your Desktop Environment'
+    echo $'\nYou chose LxQT as your Desktop Environment'
 fi
 
 read -p $'\nPress Enter to Continue...'
@@ -337,6 +337,119 @@ KDEPKGS=(
 	'zsh-autosuggestions'
 )
 
+LXQTPKGS=(
+	'mesa' # Essential Xorg First
+	'xorg'
+	'xorg-server'
+	'xorg-apps'
+	'xorg-drivers'
+	'xorg-xkill'
+	'xorg-xinit'
+	'alsa-plugins' # audio plugins
+	'alsa-utils' # audio utils
+	'autoconf' # build
+	'automake' # build
+	'base'
+	'bash-completion'
+	'baobab'
+	'bind'
+	'binutils'
+	'bison'
+	'bluez'
+	'bluez-libs'
+	'bluez-utils'
+	'bridge-utils'
+	'btrfs-progs'
+	'celluloid' # video players
+	'cmatrix'
+	'code' # Visual Studio code
+	'cronie'
+	'cups'
+	'dconf'
+	'dialog'
+	'discord'
+	'dosfstools'
+	'dtc'
+	'efibootmgr' # EFI boot
+	'egl-wayland'
+	'exfat-utils'
+	'extra-cmake-modules'
+	'flex'
+	'fuse2'
+	'fuse3'
+	'fuseiso'
+	'gamemode'
+	'gcc'
+	'git'
+	'gparted' # partition management
+	'gptfdisk'
+	'grub'
+	'grub-customizer'
+	'gst-libav'
+	'gst-plugins-good'
+	'gst-plugins-ugly'
+	'haveged'
+	'htop'
+	'iptables-nft'
+	'layer-shell-qt'
+	'libdvdcss'
+	'libnewt'
+	'libtool'
+	'linux'
+	'linux-firmware'
+	'linux-headers'
+	'lsof'
+	'lutris'
+	'lzop'
+	'lxqt'
+	'm4'
+	'make'
+	'nano'
+	'neofetch'
+	'networkmanager'
+	'ntfs-3g'
+	'ntp'
+	'openbsd-netcat'
+	'openssh'
+	'os-prober'
+	'p7zip'
+	'pacman-contrib'
+	'patch'
+	'picom'
+	'pkgconf'
+	'powerline-fonts'
+	'pulseaudio'
+	'pulseaudio-alsa'
+	'pulseaudio-bluetooth'
+	'python-notify2'
+	'python-psutil'
+	'python-pyqt5'
+	'python-pip'
+	'rsync'
+	'sddm'
+	'steam'
+	'sudo'
+	'swtpm'
+	'terminus-font'
+	'traceroute'
+	'ufw'
+	'unrar'
+	'unzip'
+	'usbutils'
+	'wget'
+	'which'
+	'wine-gecko'
+	'wine-mono'
+	'winetricks'
+	'xdg-user-dirs'
+	'xfce4-terminal'
+	'zeroconf-ioslave'
+	'zip'
+	'zsh'
+	'zsh-syntax-highlighting'
+	'zsh-autosuggestions'
+)
+
 BOTHPKGS=(
 	'mesa' # Essential Xorg First
 	'xorg'
@@ -503,7 +616,7 @@ elif [[ $desktopenv -eq 2 ]]
 then
     PKGS=("${KDEPKGS[@]}")
 else
-    PKGS=("${BOTHPKGS[@]}")
+    PKGS=("${LXQTPKGS[@]}")
 fi
 
 for PKG in "${PKGS[@]}"; do
