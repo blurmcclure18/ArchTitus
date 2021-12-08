@@ -83,6 +83,9 @@ LXQTPKGS=(
     'dxvk-bin' # DXVK DirectX to Vulcan
     'github-desktop-bin' # Github Desktop sync
     'nerd-fonts-fira-code'
+    'nordic-darker-standard-buttons-theme'
+    'nordic-darker-theme'
+    'nordic-theme'
     'noto-fonts-emoji'
     'pamac-aur-git'
     'ocs-url' # install packages from websites
@@ -91,7 +94,7 @@ LXQTPKGS=(
     'ttf-hack'
     'ttf-meslo' # Nerdfont package
     'ttf-roboto'
-    'zoom' # video conferences
+    #'zoom' # video conferences
     'snap-pac'
 )
 
