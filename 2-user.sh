@@ -77,10 +77,9 @@ KDEPKGS=(
 )
 
 LXQTPKGS=(
-    'brave-bin' # Brave Browser
     'dxvk-bin' # DXVK DirectX to Vulcan
     'github-desktop-bin' # Github Desktop sync
-    'pamac-aur-git'
+    #'pamac-aur-git'
     'ocs-url' # install packages from websites
     'sddm-theme-sugar-candy-git'
     #'themix-full-git'

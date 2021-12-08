@@ -34,9 +34,10 @@ then
     Current=Nordic
 EOF
 elif [[ $desktopenv -eq 3 ]]
-    cp /root/ArchTitus/lxqtsettings/default.conf /usr/lib/sddm/sddm.conf.d/
     echo "Enabling SDDM Service..."
     systemctl enable sddm.service
+else
+    echo "Use chroot to enable Display Manager"
 fi
 # ------------------------------------------------------------------------
 
