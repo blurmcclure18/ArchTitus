@@ -34,6 +34,7 @@ then
     Current=Nordic
 EOF
 elif [[ $desktopenv -eq 3 ]]
+then
     echo "Enabling SDDM Service..."
     systemctl enable sddm.service
 else
