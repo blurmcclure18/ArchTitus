@@ -457,7 +457,7 @@ LXQTPKGS=(
 	'zsh-autosuggestions'
 )
 
-LXQTPKGS=(
+XFCEPKGS=(
 	'mesa' # Essential Xorg First
 	'xorg'
 	'xorg-server'
