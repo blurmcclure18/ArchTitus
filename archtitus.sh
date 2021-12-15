@@ -12,6 +12,9 @@
     elif [[ $desktopenv -eq 3 ]]
     then
         arch-chroot /mnt /root/ArchTitus/5-lxqt-settings.sh
+       elif [[ $desktopenv -eq 4 ]]
+    then
+        arch-chroot /mnt /root/ArchTitus/5-lxqt-settings.sh
     else
         echo "Done!"
     fi

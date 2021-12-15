@@ -85,6 +85,15 @@ LXQTPKGS=(
     #'themix-full-git'
 )
 
+XFCEPKGS=(
+    'dxvk-bin' # DXVK DirectX to Vulcan
+    #'github-desktop-bin' # Github Desktop sync
+    #'pamac-aur-git'
+    #'ocs-url' # install packages from websites
+    'sddm-theme-sugar-candy-git'
+    #'themix-full-git'
+)
+
 BOTHPKGS=(
     'autojump'
     'awesome-terminal-fonts'
@@ -130,6 +139,9 @@ then
 elif [[ $desktopenv -eq 3 ]]
 then
     PKGS=("${LXQTPKGS[@]}")
+elif [[ $desktopenv -eq 4 ]]
+then
+    PKGS=("${XFCEPKGS[@]}")
 else
     PKGS=("${GNOMEPKGS[@]}")
 fi
